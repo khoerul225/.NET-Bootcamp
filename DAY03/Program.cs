@@ -1,31 +1,72 @@
-﻿using static System.Console;
-using DAY03;
+﻿// See https://aka.ms/new-console-template for more information
 
-var myArray = Arrays.InitArraysInt(new int[] { 10, 20, 30, 40, 50 });
 
-var boys = Arrays.InitArraysString(new[] { "asep", "budi", "charlie" });
 
-var arrRandom = Arrays.InitRandomArray(10);
+Quiz03.Solution.Soal10();
 
-Arrays.DisplayArrayInt(myArray);
-WriteLine();
-Arrays.DisplayArrayString(boys);
 
-WriteLine();
-var total = Arrays.SumAllElement(myArray);
-Write($"Total :{total}");
 
-WriteLine();
-Arrays.DisplayArrayInt(arrRandom);
-var largest = Arrays.FindLargestElement(arrRandom);
-var indexOfLargest = Arrays.FindIndexLargest(arrRandom);
-WriteLine($"Largest : {largest}");
-WriteLine($"Index of Largest : {indexOfLargest}");
-WriteLine();
-Array.Sort(arrRandom);
-WriteLine($"Found at index : {Array.BinarySearch(arrRandom, 25)}");
-Arrays.DisplayArrayInt(arrRandom);
-Array.Reverse(arrRandom);
-WriteLine();
+/*Quiz03.Solution.Soal9();//9//2
+Quiz03.Solution.Soal10();//10//3
+Quiz03.Solution.Soal11();//11//4
+Quiz03.Solution.Soal12();//12/5
+Quiz03.Solution.Soal13();//13/6
+Quiz03.Solution.Soal14();//14/7
+Quiz03.Solution.Soal15();//15/8
+*/
+Console.ReadLine();
 
-ReadLine();
+/*
+bool testing = false;
+while (!testing)
+{
+    Console.Write("Masukan No Soal:");
+    int no = Convert.ToInt32(Console.ReadLine());
+    switch (no)
+    {
+        case 1:
+            Quiz03.Solution.Soal9();
+            break;
+        case 2:
+            Quiz03.Solution.Soal10();
+            break;
+        case 3:
+            Quiz03.Solution.Soal11();
+            break;
+        case 4:
+            Quiz03.Solution.Soal12();
+            break;
+        case 5:
+            Quiz03.Solution.Soal13();
+            break;
+        case 6:
+            Quiz03.Solution.Soal14();
+            break;
+        case 7:
+            Quiz03.Solution.Soal15();
+            break;
+        default:
+            Console.WriteLine($"Tidak ada nomor soal {no}");
+            break;
+    }
+option:
+    Console.Write("Lanjut?(y/n)");
+    string opt = Console.ReadLine();
+    if (opt == "n")
+    {
+        Console.WriteLine("Terima Kasih");
+        testing = true;
+    }
+    else if (opt == "y")
+    {
+        Console.Clear();
+
+    }
+    else
+    {
+        Console.Clear();
+        goto option;
+    }
+}
+
+*/
