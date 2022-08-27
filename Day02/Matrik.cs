@@ -12,9 +12,9 @@ namespace Day02
         {
             int[,] matrix = new int[5, 5];
             matrix[2, 2] = 125;
-            // Console.WriteLine(matrix);
+             Console.WriteLine(matrix);
         }
-
+/*
         public static int[,] FillRandomMatrix(int baris, int kolom)
         {
             int[,] matrix = new int[baris, kolom];
@@ -59,6 +59,44 @@ namespace Day02
             }
             return matrix;
         }
+
+        public static void DisplayMatrixChar(char[,] mat)
+        {
+            for (int i = 0; i < mat.GetLength(0); i++)
+            {
+                Console.Write($"Student{i}\t");
+                for (int j = 0; j < mat.GetLength(1); j++)
+                {
+                    Console.Write($"{mat[i, j]}\t");
+                }
+                Console.WriteLine();
+            }
+        }
+
+        public static void no15 ()
+         {
+            char[,] mat =  
+                    {
+                    {'A','B','A','C','C','D','E','E','A','D'},
+                    {'D','B','A','B','C','A','E','E','A','D'},
+                    {'E','D','D','A','C','B','E','E','A','D'},
+                    {'C','B','A','E','D','C','E','E','A','D'},
+                    {'A','B','D','C','C','D','E','E','A','D'},
+                    {'B','B','E','C','C','D','E','E','A','D'},
+                    {'B','B','A','C','C','D','E','E','A','D'},
+                    {'E','B','E','C','C','D','E','E','A','D'},
+                    };
+
+
+            char[] kunci = { 'D', 'B', 'D', 'C', 'C', 'D', 'A', 'E', 'A', 'D' };
+            int count = 0;
+
+
+            
+
+        }
+
+
         public static void DisplayMatrix(int[,] matrix)
         {
             for (int i = 0; i < matrix.GetLength(0); i++) // looping baris
@@ -70,5 +108,24 @@ namespace Day02
                 Console.WriteLine();
             }
         }
+
+        public static void DisplayMatrix(char [,] matrix)
+        {
+            char[] jawaban = new char[matrix.GetLength(0)];
+            for (int i = 0; i < matrix.GetLength(1); i++)
+            { 
+
+            }
+
+            for (int i = 0; i < matrix.GetLength(0); i++) // looping baris
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)//loop kolom
+                {
+                    Console.Write(matrix[i, j] + " ");
+                }
+                Console.WriteLine();
+            }
+        }
+*/
     }
 }
