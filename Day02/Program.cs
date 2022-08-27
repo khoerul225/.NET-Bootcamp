@@ -1,4 +1,4 @@
-using static System.Console;
+/*using static System.Console;
 using Day02;
 
 var myArray = Arrays.InitArraysInt(new int[] { 10, 20, 30, 40, 50 });
@@ -44,3 +44,4 @@ var matrixDiagonal = Matrix.MatrixDiagonal(5, 5);
 Matrix.DisplayMatrix(matrixDiagonal);
 
 ReadLine();
+*/
