@@ -1,0 +1,9 @@
+﻿Quiz02.Solution.Soal1();
+Quiz02.Solution.Soal9();
+Quiz02.Solution.Soal10();
+Quiz02.Solution.Soal11();
+Quiz02.Solution.Soal12();
+Quiz02.Solution.Soal13();
+Quiz02.Solution.Soal14();
+Quiz02.Solution.Soal15();
+*/

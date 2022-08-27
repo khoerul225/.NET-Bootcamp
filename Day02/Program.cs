@@ -1,10 +1,8 @@
 using static System.Console;
 using Day02;
-/*
+
 var myArray = Arrays.InitArraysInt(new int[] { 10, 20, 30, 40, 50 });
-
 var boys = Arrays.InitArraysString(new[] { "asep", "budi", "charlie" });
-
 var arrRandom = Arrays.InitRandomArray(10);
 
 Arrays.DisplayArrayInt(myArray);
@@ -25,22 +23,9 @@ WriteLine();
 Array.Sort(arrRandom);
 WriteLine($"Found at index : {Array.BinarySearch(arrRandom, 25)}");
 Arrays.DisplayArrayInt(arrRandom);
-Array.Reverse(arrRandom);
+Array.Reverse(arrRandom); 
 WriteLine();
 
-ReadLine();*/
-
-/** QUIZ SOLUTION */
-
-/*int[] n = { 15, 10, 20, 30, 45, 24 };
-WriteLine("Before Random Position");
-Arrays.DisplayArrayInt(n);
-WriteLine();
-var randomArr = QuizSolution.RandomPosition(n);
-WriteLine("After Random Position");
-Arrays.DisplayArrayInt(randomArr);
-
-WriteLine();
 
 WriteLine("Before Shift Array");
 Arrays.DisplayArrayInt(n);
