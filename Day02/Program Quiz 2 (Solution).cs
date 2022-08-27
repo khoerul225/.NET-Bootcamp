@@ -65,7 +65,7 @@ while (!testing)
             break;
     }
 option:
-    Console.Write("Lanjut?(y/n)");
+    Console.Write("Lanjut?(Ya(y)/Tidak(n)/Mungkin(m))");
     string opt = Console.ReadLine();
     if (opt == "n")
     {
@@ -76,6 +76,13 @@ option:
     {
         Console.Clear();
 
+    }
+    else if (opt == "m")
+    {
+        Console.Clear();
+        Console.WriteLine("Jangan Bingung Dong");
+        Console.WriteLine();
+        goto option;
     }
     else
     {
@@ -204,7 +211,7 @@ Quiz02.Solution.Soal13();
 Console.ReadLine();
 Console.WriteLine();
 Console.WriteLine();
-/*
+*/
 
 
 
