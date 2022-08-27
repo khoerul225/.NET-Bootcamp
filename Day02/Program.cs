@@ -1,12 +1,8 @@
-﻿using static System.Console;
+using static System.Console;
 using Day02;
 
-// Script Untuk Menjalankan Array
-
-/*var myArray = Arrays.InitArraysInt(new int[] { 10, 20, 30, 40, 50 });
-
+var myArray = Arrays.InitArraysInt(new int[] { 10, 20, 30, 40, 50 });
 var boys = Arrays.InitArraysString(new[] { "asep", "budi", "charlie" });
-
 var arrRandom = Arrays.InitRandomArray(10);
 
 Arrays.DisplayArrayInt(myArray);
@@ -30,15 +26,21 @@ Arrays.DisplayArrayInt(arrRandom);
 Array.Reverse(arrRandom); 
 WriteLine();
 
+
+WriteLine("Before Shift Array");
+Arrays.DisplayArrayInt(n);
+var shiftArray = QuizSolution.ShiftArray(n);
+WriteLine();
+WriteLine("After Shift Array");
+Arrays.DisplayArrayInt(shiftArray);*/
+
+/** Matrix */
+Matrix.InitMatrix();
+var myMatrix = Matrix.FillRandomMatrix(5, 5);
+Matrix.DisplayMatrix(myMatrix);
+
+WriteLine();
+var matrixDiagonal = Matrix.MatrixDiagonal(5, 5);
+Matrix.DisplayMatrix(matrixDiagonal);
+
 ReadLine();
-// Script Untuk Menjalankan Array
-//Jawaban N0 1
-
-
-int[] n = { 15, 10, 20, 30, 45, 24 };
-Console.WriteLine("Before Random Position");
-Quiz02.Solution.ReadInt(n);
-Console.WriteLine("After Random Position");
-var randomArr = Quiz02.Solution.RandomPosition(n);
-Quiz02.Solution.ReadInt(n);
-*/
