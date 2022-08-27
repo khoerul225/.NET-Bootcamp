@@ -35,6 +35,7 @@ WriteLine("After Shift Array");
 Arrays.DisplayArrayInt(shiftArray);*/
 
 /** Matrix */
+/*
 Matrix.InitMatrix();
 var myMatrix = Matrix.FillRandomMatrix(5, 5);
 Matrix.DisplayMatrix(myMatrix);
