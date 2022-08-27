@@ -1,5 +1,4 @@
-﻿using static System.Console;
-using Day02;
+bool testing = false;
 
 int[] arr1 = new int[] { 15, 2, 30, 12, 10, 5 };
 int[] arr23 = new int[] { 15, 2, 30, 12, 10, 5 };
@@ -7,7 +6,7 @@ int[] arr5 = new int[] { 5, 2, 30, 12, 10, 5, 2, 10, 5 };
 int[] arr6 = new int[] { 1, 5, 3, 7, 8, 5, 1, };
 int[] arr7 = new int[] { 1, 2, 3, 2, 7, 7, 1, 6, 3, 4, 5, 2, 3, 6, 8, 9 };
 
-bool testing = false;
+
 while (!testing)
 {
     Console.Write("Masukan No Soal (N0 1-15):");
@@ -98,6 +97,11 @@ Console.ReadLine();
 
 
 /*
+
+﻿using static System.Console;
+using Day02;
+
+
 Console.WriteLine("-----------NO1---------");
 Console.WriteLine("-----------------------");
 Quiz02.Solution.Soal1(arr1);
