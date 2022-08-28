@@ -1,4 +1,4 @@
-using static System.Console;
+/*using static System.Console;
 using Day02;
 
 var myArray = Arrays.InitArraysInt(new int[] { 10, 20, 30, 40, 50 });
@@ -32,9 +32,9 @@ Arrays.DisplayArrayInt(n);
 var shiftArray = QuizSolution.ShiftArray(n);
 WriteLine();
 WriteLine("After Shift Array");
-Arrays.DisplayArrayInt(shiftArray);*/
+Arrays.DisplayArrayInt(shiftArray);
 
-/** Matrix */
+/***//* Matrix *//*
 Matrix.InitMatrix();
 var myMatrix = Matrix.FillRandomMatrix(5, 5);
 Matrix.DisplayMatrix(myMatrix);
@@ -44,3 +44,4 @@ var matrixDiagonal = Matrix.MatrixDiagonal(5, 5);
 Matrix.DisplayMatrix(matrixDiagonal);
 
 ReadLine();
+*/
