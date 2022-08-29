@@ -2,7 +2,40 @@
 {
     class Solution
     {
-        public static void DisplayList(List<string> list)
+        public static void ReadInt(int[] arr)
+        {
+            for (int i = 0; i < arr.Length; i++)
+            {
+                Console.Write($"{arr[i]} ");
+
+            }
+            Console.WriteLine();
+        }
+        ///Perbaikan
+        ///
+        public static void a()
+        {
+            int[] arr = new int[10];
+
+        }
+        public static void Soal1p()
+        {
+            Console.Write("Masukan :");
+            int n = Convert.ToInt32(Console.ReadLine());
+            int [] mat = new int[n];
+            int [] s = mat.Distinct().ToArray();            
+            for (int i = 0; i < s.Length; i++)
+            {
+                Console.Write($"{s} ");
+            }
+            Console.WriteLine("-----------------------");
+            Console.WriteLine("Output");      
+            Console.WriteLine(n);
+        }
+
+
+
+    public static void DisplayList(List<string> list)
         {
             foreach (var i in list)
             {

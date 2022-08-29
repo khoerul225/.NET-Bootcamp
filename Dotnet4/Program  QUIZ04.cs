@@ -21,12 +21,12 @@ quiz04_dotnet.Solution.Soal9();
 bool testing = false;
 while (!testing)
 {
-    Console.Write("Masukan No Soal:");
+    Console.Write("Masukan No Soal (N0 1-9):");
     int no = Convert.ToInt32(Console.ReadLine());
     switch (no)
     {
         case 1:
-            quiz04_dotnet.Solution.Soal1();
+            quiz04_dotnet.Solution.Soal1p();
             break;
         case 2:
             quiz04_dotnet.Solution.Soal2();
@@ -57,7 +57,7 @@ while (!testing)
             break;
     }
 option:
-    Console.Write("Lanjut?(y/n)");
+    Console.Write("Lanjut?(Ya(y)/Tidak(n)/Mungkin(m))");
     string opt = Console.ReadLine();
     if (opt == "n")
     {
@@ -67,10 +67,18 @@ option:
     else if (opt == "y")
     {
         Console.Clear();
+
+    }
+    else if (opt == "m")
+    {
+        Console.Clear();
+        Console.WriteLine("Jangan Bingung Dong");
+        Console.WriteLine();
+        goto option;
     }
     else
     {
         Console.Clear();
         goto option;
     }
-};
+}
