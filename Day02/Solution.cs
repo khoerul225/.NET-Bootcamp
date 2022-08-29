@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Quiz02
+﻿namespace Quiz02
 {
     class Solution
     {
@@ -537,7 +531,7 @@ namespace Quiz02
                 Console.Write($"{kunci[i]}\t");
             }
             Console.WriteLine();
-            for (int i = 0; i <arr15.GetLength(0); i++)
+            for (int i = 0; i < arr15.GetLength(0); i++)
             {
                 for (int j = 0; j < arr15.GetLength(1); j++)
                 {
@@ -551,5 +545,5 @@ namespace Quiz02
             }
 
         }
-    }       
+    }
 }
