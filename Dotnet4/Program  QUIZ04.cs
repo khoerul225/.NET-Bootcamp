@@ -26,13 +26,13 @@ while (!testing)
     switch (no)
     {
         case 1:
-            quiz04_dotnet.Solution.Soal1p();
+            quiz04_dotnet.Solution.Soal1();
             break;
         case 2:
             quiz04_dotnet.Solution.Soal2();
             break;
         case 3:
-            quiz04_dotnet.Solution.Soal3b();
+            quiz04_dotnet.Solution.Soal3();
             break;
         case 4:
             quiz04_dotnet.Solution.Soal4();
@@ -52,6 +52,7 @@ while (!testing)
         case 9:
             quiz04_dotnet.Solution.Soal9();
             break;
+
         default:
             Console.WriteLine($"Tidak ada nomor soal {no}");
             break;

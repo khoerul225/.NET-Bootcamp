@@ -1,4 +1,6 @@
-﻿namespace quiz04_dotnet
+﻿using System.Linq;
+using System.Collections.Generic;
+namespace quiz04_dotnet
 {
     class Solution
     {
@@ -89,89 +91,127 @@
             }
             return list;
         }
+        //No 1
+        public static void displayHashset(HashSet<int> number1)
+        {
+
+            foreach (int tampil in number1)
+            {
+                Console.Write($" {tampil}");
+            }
+        }
+
+
+        public static void SameElement(HashSet<int> number1, HashSet<int> number2)
+        {
+            HashSet<int> result = new HashSet<int>(number1);
+            result.IntersectWith(number2);
+            Console.WriteLine("Elemen yang sama adalah : ");
+            displayHashset(result);
+        }
+
+        public static void UnionElement(HashSet<int> number1, HashSet<int> number2)
+        {
+            HashSet<int> result = new HashSet<int>(number1);
+            result.UnionWith(number2);
+            Console.WriteLine("Tampilan union : ");
+            displayHashset(result);
+        }
+
+        public static void ExceptElement(HashSet<int> number1, HashSet<int> number2)
+        {
+            HashSet<int> result = new HashSet<int>(number1);
+            result.ExceptWith(number2);
+            Console.WriteLine("Tampilan yang tidak sama : ");
+            displayHashset(result);
+        }
+
+        public static void SymmetricExceptElement(HashSet<int> number1, HashSet<int> number2)
+        {
+            HashSet<int> result = new HashSet<int>(number1);
+            result.SymmetricExceptWith(number2);
+            Console.WriteLine("Tampilan element yang tidak sama A & B : ");
+            displayHashset(result);
+        }
+
         public static void Soal1()
         {
-            Console.WriteLine("---------------------------");
-            Console.WriteLine("--------------N01----------");
-            Console.WriteLine("---------------------------");
+            HashSet<int> hs1 = new HashSet<int>() { 1, 2, 5, 6, 9 };
+            HashSet<int> hs2 = new HashSet<int>() { 1, 2, 3, 4 };
 
-            var hs1 = new HashSet<int>() { 1, 2, 5, 6, 9 };
-            var hs2 = new HashSet<int>() { 1, 2, 3, 4 };
-
-            var r1 = new HashSet<int>(hs1);
-            IEnumerable<int> both1 = r1.Intersect(hs2);
-            Console.WriteLine("A irisan B)");
-            foreach (var item in both1)
-                Console.Write($"{item} ");
+            displayHashset(hs1);
             Console.WriteLine();
-            Console.WriteLine("---------------------------");
-
-            var r2 = new HashSet<int>(hs1);
-            IEnumerable<int> both2 = r2.Union(hs2);
-            Console.WriteLine("A union B");
-            foreach (var item in both2)
-                Console.Write($"{((short)item)}");
-            both2 = r2.Union(hs1);
-            Console.WriteLine(short.MinValue);
-    
-                
+            displayHashset(hs2);
             Console.WriteLine();
-            Console.WriteLine("---------------------------");
-            // union => 1,2,3,4,5,6,9
-            var r3 = new HashSet<int>(hs1);
-            IEnumerable<int> both3 = r3.Except(hs2);
-            Console.WriteLine("A yang tidak sama dengan B");
-            var both4 = r3.Except(hs1);
-            foreach (var item in both3)
-                Console.Write($"{item} ");
+            SameElement(hs1, hs2);
             Console.WriteLine();
-            Console.WriteLine("---------------------------");
-            var r4 = new HashSet<int>(hs1);
-            r4.SymmetricExceptWith(hs2); //output 3,4,5,6,9
-            //Convert hashset to list
-            Console.WriteLine("Yang tidak sama di A & B");
-            var myNumber = r4.ToList();
-            foreach (var item in myNumber)
-                Console.Write($"{item} ");
+            UnionElement(hs1, hs2);
             Console.WriteLine();
-            Console.WriteLine("---------------------------");
+            ExceptElement(hs1, hs2);
+            Console.WriteLine();
+            SymmetricExceptElement(hs1, hs2);
+            Console.WriteLine();
+            Console.WriteLine();
         }
+
+
+
+        public static void DisplayList(List<int> numbers)
+        {
+
+            foreach (int tampil in numbers)
+            {
+                Console.Write($" {tampil}");
+            }
+        }
+        public static void Reverse(List<int> numbers)
+        {
+            numbers.Reverse();
+            foreach (int tampil in numbers)
+            {
+                Console.Write($" {tampil}");
+            }
+        }
+
+        public static void ReverseC(List<String> StringA)
+        {
+            StringA.Reverse();
+            foreach (string tampil in StringA)
+            {
+                Console.Write($" {tampil}");
+            }
+        }
+
+        public static void DisplayListC(List<String> StringA)
+        {
+
+            foreach (String tampil in StringA)
+            {
+                Console.Write($" {tampil}");
+            }
+        }
+
 
         public static void Soal2()
         {
-            List<int> Soal2a = new List<int>();
-            Soal2a.Add(1);
-            Soal2a.Add(2);
-            Soal2a.Add(3);
-            Soal2a.Add(4);
+            var numbers = new List<int>() { 1, 2, 3,4 };
+            Console.WriteLine("Sebelum Reverse"); 
+            DisplayList(numbers);
             Console.WriteLine();
-            Console.WriteLine("input");
-            foreach (int x in Soal2a)
-            { Console.Write($"{x} "); }
+            Console.WriteLine("Setelah Reverse");
+            Reverse(numbers);
             Console.WriteLine();
-            Console.WriteLine("output");
-            Soal2a.Reverse();
-            foreach (int y in Soal2a) { Console.Write($"{y} "); }
+            var StringA = new List<String>() {"A","AA","CCC","DDD"};
+            Console.WriteLine("Sebelum Reverse");
+            DisplayListC(StringA);
             Console.WriteLine();
-            ///Pembatas
-            List<string> Soal2b = new List<string>();
-            Soal2b.Add("A");
-            Soal2b.Add("BB");
-            Soal2b.Add("CCC");
-            Soal2b.Add("DDDD");
-
-            Console.WriteLine();
-            Console.WriteLine("input");
-            foreach (string i in Soal2b)
-            { Console.Write($"{i} "); }
-            Console.WriteLine();
-            Console.WriteLine("output");
-            Soal2b.Reverse();
-            foreach (string k in Soal2b) { Console.Write($"{k} "); }
+            Console.WriteLine("Setelah Reverse");
+            ReverseC(StringA);
             Console.WriteLine();
             Console.WriteLine();
-
+            Console.WriteLine();
         }
+
 
 
         public static void hitungBuah(string buah)
@@ -233,107 +273,175 @@
 
         }
 
+
         public static void Soal3()
         {
-            Console.WriteLine("---------------------------");
-            var A = new List<string>();
-            Console.Write("Input List A (input 'x' untuk selesai): ");
-            A = InputList();
-            Console.Write("Input\t: ");
-            DisplayList(A);
-            Console.Write("Output\t: ");
 
-            DisplayList(A);
+            Console.Write("Input  : ");
+            int[] items = { 1,1,2, 3, 4, 1, 2, 3};
+            ReadInt(items);
+            IEnumerable<int> uniqueItems = items.Distinct<int>();
+            Console.WriteLine("Output : " + string.Join(",", uniqueItems));
+            
+            Console.Write("Input  : ");
+            int[] items2 = { 7,5,3,5,1 };
+            ReadInt(items2);
+            IEnumerable<int> uniqueItems2 = items2.Distinct<int>();
+            Console.WriteLine("Output : " + string.Join(",", uniqueItems2));
+            
+            Console.Write("Input  : ");
+            int[] items3 = { 1,1,1,1,1,1 };
+            ReadInt(items);
+
+            IEnumerable<int> uniqueItems3 = items3.Distinct<int>();
+            Console.WriteLine("Output : " + string.Join(",", uniqueItems3));
+            Console.ReadLine();
+            Console.WriteLine();
+            Console.WriteLine();
         }
-
-        public static void Soal3b()
+        public static int GetRightPosition(List<int> output, int value)
         {
-            HashSet<int> evenNumbers = new HashSet<int>() { 1, 1, 2, 3, 4, 1, 2, 3 };
-            for (int i = 0; i <evenNumbers.Count; i++)
+            int l = 0;
+            int r = output.Count - 1;
+
+            while (l <= r)
             {
-                // Populate numbers with just even numbers.
-                evenNumbers.Add(i * 2);
-            }
-            HashSet<int> oddNumbers = new HashSet<int>() { 1, 2, 3, 4 };
-            for (int i = 0; i <oddNumbers.Count ; i++)
-            {
+                int mid = (l + r) / 2;
 
-                // Populate oddNumbers with just odd numbers.
-                oddNumbers.Add((i * 2) + 1);
-            }
-
-
-
-            // Create a new HashSet populated with even numbers.
-            HashSet<int> numbers = new HashSet<int>(evenNumbers);
-            Console.WriteLine("numbers UnionWith oddNumbers...");
-            numbers.UnionWith(oddNumbers);
-
-            Console.Write("numbers contains {0} elements: ", numbers.Count);
-            DisplaySet(numbers);
-        }
-
-        private static void DisplaySet(HashSet<int> set)
-        {
-            Console.Write("{");
-            foreach (int i in set)
-            {
-                Console.Write(" {0}", i);
-            }
-            Console.WriteLine(" }");
-        }
-        public static List<string> RemoveDuplicate(List<string> A)
-        {
-            var unique = A.Distinct().ToList();
-            return unique;
-        }
-        public static void Soal4()
-        {
-            Console.WriteLine("---------------------------");
-            var A = new List<string>();
-            Console.Write("Input List A (input 'x' untuk selesai): ");
-            A = InputList();
-            Console.Write("Input\t: ");
-            DisplayList(A);
-            Console.Write("Output\t: ");
-            DisplayList(FindLongestSequence(A));
-        }
-        public static List<string> FindLongestSequence(List<string> A)
-        {
-            var list = new List<string>();
-            int count = 1;
-            int tempcount = 1;
-            int start = 0;
-            for (int i = 1; i < A.Count; i++)
-            {
-                if (Convert.ToUInt32(A[i]) >= Convert.ToUInt32(A[i - 1]))
+                if (output[mid] < value)
                 {
-                    count++;
-                    if (i == A.Count - 1)
-                    {
-                        if (tempcount < count)
-                        {
-                            tempcount = count;
-                            start = i - tempcount + 1;
-                        }
-                    }
+                    l = mid + 1;
                 }
                 else
                 {
-                    if (tempcount < count)
-                    {
-                        tempcount = count;
-                        start = i - tempcount;
-                    }
-                    count = 1;
+                    r = mid - 1;
                 }
             }
-            for (int i = start; i < start + tempcount; i++)
-            {
-                list.Add(A[i]);
-            }
-            return list;
+
+            return l;
         }
+
+        public static bool IsElementExist(List<int> output, int value)
+        {
+            int l = 0;
+            int r = output.Count - 1;
+
+            while (l <= r)
+            {
+                int mid = (l + r) / 2;
+
+                if (output[mid] == value)
+                {
+                    return true;
+                }
+
+                if (output[mid] < value)
+                {
+                    l = mid + 1;
+                }
+                else
+                {
+                    r = mid - 1;
+                }
+            }
+
+            return false;
+        }
+
+        public static List<int> LongestIncreasingSubSequence(int[] input)
+        {
+            List<int> output = new List<int>();
+            Dictionary<int, int> dictionary = new Dictionary<int, int>();
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                if (output.Count == 0)
+                {
+                    output.Add(input[i]);
+                    dictionary[input[i]] = Int32.MinValue;
+                }
+                else
+                {
+                    if (!IsElementExist(output, input[i]))
+                    {
+                        if (input[i] > output.Last())
+                        {
+                            output.Add(input[i]);
+                            dictionary[input[i]] = output[output.Count - 2];
+                        }
+                        else
+                        {
+                            int position = GetRightPosition(output, input[i]);
+
+                            output[position] = input[i];
+
+                            if (position == 0)
+                            {
+                                dictionary[input[i]] = Int32.MinValue;
+                            }
+                            else
+                            {
+                                dictionary[input[i]] = output[position - 1];
+                            }
+
+                        }
+                    }
+                }
+            }
+
+            int lastElement = output.Last();
+            List<int> finalResult = new List<int>();
+
+            while (lastElement != Int32.MinValue)
+            {
+                finalResult.Add(lastElement);
+                lastElement = dictionary[lastElement];
+            }
+
+            return finalResult;
+        }
+
+
+        public static void Soal4()
+        {
+            int[] input = { 7, 2, 7, 1, 2, 5, 7, 1 };
+            List<int> finaList = LongestIncreasingSubSequence(input);
+            Console.WriteLine("Input:");
+            ReadInt(input);
+            Console.WriteLine("Output:");
+            for (int i = finaList.Count - 1; i >= 0; i--)
+            {
+                Console.Write(finaList[i]);
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+
+            int[] input2 = { 7, 2, 7, 1, 2, 3, 8, 1, 2, 3, 4, 5 };
+            List<int> finaList2 = LongestIncreasingSubSequence(input2);
+            Console.WriteLine("Input:");
+            ReadInt(input2);
+            Console.WriteLine("Output:");
+            for (int i = finaList2.Count - 1; i >= 0; i--)
+            {
+                Console.Write(finaList2[i]);
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+
+            int[] input3 = { 1, 1, 2, 2, 2, 3, 3, 3, 3 };
+            List<int> finaList3 = LongestIncreasingSubSequence(input3);
+            Console.WriteLine("Input:");
+            ReadInt(input3);
+            Console.WriteLine("Output:");
+            for (int i = finaList3.Count - 1; i >= 0; i--)
+            {
+                Console.Write(finaList3[i]);
+            }
+            Console.WriteLine();
+            Console.WriteLine();
+        }
+
+
         public static void Soal5()
         {
             Console.WriteLine("---------------------------");
@@ -346,42 +454,33 @@
         }
         public static void Soal6()
         {
-            Console.WriteLine("---------------------------");
-            var A = new List<string>();
-            Console.Write("Input List A (input 'x' untuk selesai): ");
-            A = InputList();
-            Console.Write("Input\t: ");
-            DisplayList(A);
-            Dictionary<string, int> dic = new Dictionary<string, int>();
-            A.Sort();
-            int count = 1;
-            for (int i = 0; i < A.Count; i++)
-            {
-                string x = A[i];
-                if (i < A.Count - 1 && x == A[i + 1])
-                {
-                    count++;
-                }
-                else if (i == A.Count - 1 && x == A[i - 1])
-                {
-                    dic.Add(x, count);
-                }
-                else
-                {
-                    dic.Add(x, count);
-                    count = 1;
-                }
-            }
-            Console.Write("Result\t: ");
-            DisplayDic(dic);
-            Console.Write("Output\t: ");
-            foreach (var i in dic)
-            {
-                if (i.Value == dic.Values.Max())
-                {
-                    Console.Write($"{i.Key} ");
-                }
-            }
+            // Creating a count variable
+
+            // Creating an array of colors
+            int[] Input = {1,2,3,4,4,4,3,4,2,4};
+            Console.WriteLine("Input:");
+            var total = 0;
+            var total2 = 0;
+            // Counting the total number of time blue appears
+            // in the array
+            ReadInt(Input);
+            total = Input.Count(c => c == 4);
+
+            // Displaying the count
+            Console.WriteLine("Output:");
+            Console.WriteLine(total);
+
+            // Creating an array of colors
+            int[] Input2 = { 1, 2, 3, 4, 4, 4, 3, 4, 2, 4 };
+            Console.WriteLine("Input:");
+            ReadInt(Input2);
+            // Counting the total number of time blue appears
+            // in the array
+            total2 = Input2.Count(c => c == 4);
+
+            // Displaying the count
+            Console.WriteLine("Input:");
+            Console.WriteLine(total2);
         }
         public static void Soal7()
         {
