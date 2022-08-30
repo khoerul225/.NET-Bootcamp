@@ -43,13 +43,13 @@ namespace PartTwo
             ///item adalah roowwwnya misal 
         }
 
-        public Dictionary<Employee, int> GetEmployeeByRole(List<Employee> list)
+/*        public Dictionary<Employee, int> GetEmployeeByRole(List<Employee> list)
         {
             {
                 Dictionary<Employee, int> result = new Dictionary<Employee, int>();
             }
             //throw new NotImplementedException();
-        }
+        }*/
 
 
         /// Ketika sudah menambahkan hubungan di program selanjutnya ctrl + . (dot) di Employeemp untuk menambahkan interface

@@ -26,7 +26,6 @@ namespace PartTwo
         public override string? ToString()
         {
             return $"{base.ToString()}| T.QA = {this.makan.ToString("C", new CultureInfo("Id-ID"))}| Total Salary : {TotalSalary.ToString("C", new CultureInfo("Id-ID"))}\n";
-            Console.WriteLine();
         } 
     }
 }

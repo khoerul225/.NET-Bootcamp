@@ -9,14 +9,20 @@ namespace PartTwo
     internal interface IEmployee
     {
         public List<Employee> InitDataEmployee();
-        
-        public void Showlist<T> (ref List<T> list);  ///Generic Show List
+
+        ///Generic Show List
+        public void Showlist<T> (ref List<T> list);  
 
         public Employee FindEmployeeById(List <Employee> list, int id);
 
+
+        //methode return wirth generice datatype<T>
         public decimal GetTotalSalary<T> (ref List<T> list);  ///Generic Total
 
         public List<Employee> FindListRange (List<Employee> list,decimal startForm,decimal endTo);
+
+        //Agregate Summary
+        public Dictionary<Employee, int> GetEmployeeByRole (List<Employee> list);
 
     }
 }
