@@ -4,6 +4,7 @@ namespace quiz04_dotnet
 {
     class Solution
     {
+        ///Function
         public static void ReadInt(int[] arr)
         {
             for (int i = 0; i < arr.Length; i++)
@@ -36,7 +37,7 @@ namespace quiz04_dotnet
         }
 
 
-
+    ///Method
     public static void DisplayList(List<string> list)
         {
             foreach (var i in list)
@@ -568,8 +569,7 @@ namespace quiz04_dotnet
             return R;
         }
         public static void Soal9()
-        {
-
+        { 
             Console.WriteLine("---------------------------");
             Console.Write("Input1\t: ");
             int x = Convert.ToInt32(Console.ReadLine());
@@ -577,6 +577,81 @@ namespace quiz04_dotnet
             int c = Convert.ToInt32(Console.ReadLine());
             DisplayList(CountSequence(x, c));
         }
+
+        public static void MasukSoal9()
+        {
+            Console.Write("Pilih soal (1/2)\t: ");
+            int no = Convert.ToInt32(Console.ReadLine());
+            switch (no)
+            {
+                case 2:
+                    quiz04_dotnet.Solution.Main();
+                    break;
+                case 1:
+                    quiz04_dotnet.Solution.Soal9();
+                    break;
+            }
+        }
+
+        public static void Main() ///B
+        {
+            Console.Write("Input1()\t: ");
+            int no = Convert.ToInt32(Console.ReadLine());
+            switch (no)
+            {
+                case 1:
+                    Console.Write("Monday\t: ");
+                    quiz04_dotnet.Solution.Soal9a();
+                    break;
+                case 2:
+                    Console.Write("Tuesdey\t: ");
+                    quiz04_dotnet.Solution.Soal9a();
+                    break;
+                case 3:
+                    Console.Write("Wednesday\t: ");
+                    break;
+                case 4:
+                    Console.Write("Thursday\t: ");
+                    quiz04_dotnet.Solution.Soal9a();
+                    break;
+                case 5:
+                    Console.Write("Friday\t: ");
+                    quiz04_dotnet.Solution.Soal9a();
+                    break;
+                case 6:
+                    Console.Write("Saturday\t: ");
+                    quiz04_dotnet.Solution.Soal9a();
+                    break;
+                case 7:
+                    Console.Write("Sunday\t: ");
+                    quiz04_dotnet.Solution.Soal9a();
+                    break;
+
+            }
+
+
+        }
+
+
+
+
+        public static void Soal9a()
+
+        {
+            Console.WriteLine();
+            Console.Write("Count\t: ");
+            int n = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine();
+            string[] cars = { "FRIDAY","SATURDAY","SUNDAY", "MONDAY", "TUESDAY", "WEDNESDAY", "THURSDAY", "FRIDAY" };
+            for (int i = 0; i < n; i++)
+            {
+                Console.Write(cars[i] + " ");
+            }
+            Console.WriteLine();
+        }
+
+
         public static List<string> CountSequence(int currentValue, int sequenceLength)
         {
             var A = new List<string>();

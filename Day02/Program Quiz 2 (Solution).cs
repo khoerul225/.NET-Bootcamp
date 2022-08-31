@@ -10,7 +10,6 @@ int[] arr23 = new int[] { 15, 2, 30, 12, 10, 5 };
 int[] arr5 = new int[] { 5, 2, 30, 12, 10, 5, 2, 10, 5 };
 int[] arr6 = new int[] { 1, 5, 3, 7, 8, 5, 1, };
 
-
 while (!testing)
 {
     Console.Write("Masukan No Soal (N0 1-15):");
@@ -37,6 +36,7 @@ while (!testing)
             break;
         case 7:
             int[] arr7 = new int[] { 1, 2, 3, 2, 7, 7, 1, 6, 3, 4, 5, 2, 3, 6, 8, 9 };
+
             Quiz02.Solution.Soal7(arr7);
             break;
         case 8:

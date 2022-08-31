@@ -50,9 +50,11 @@ while (!testing)
             quiz04_dotnet.Solution.Soal8();
             break;
         case 9:
-            quiz04_dotnet.Solution.Soal9();
+            quiz04_dotnet.Solution.MasukSoal9();
             break;
-
+        case 10:
+            quiz04_dotnet.Solution.MasukSoal9();
+            break;
         default:
             Console.WriteLine($"Tidak ada nomor soal {no}");
             break;

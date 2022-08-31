@@ -16,10 +16,14 @@ namespace Day01
             int month = now.Month;
             int year = now.Year;
             int hour = now.Hour;
-                int minute = now.Minute;
-                int second = now.Second;
+            int minute = now.Minute;
+            int second = now.Second;
 
-                // only date
+
+
+            
+
+            // only date
             DateTime onlyDate = now.Date;
                 Console.WriteLine($"Only Date : {onlyDate}");
 
