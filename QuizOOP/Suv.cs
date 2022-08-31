@@ -7,36 +7,26 @@ using System.Threading.Tasks;
 
 namespace QuizOOP
 {
-    internal class Suv : Transportation
+    internal class SUV : CAR
     {
         private decimal sewa;
         private decimal supir;
 
-
-        public Suv(string noPolisi, int tahun, string type, decimal totalRevenue) : base(noPolisi, tahun, type, totalRevenue)
+        public SUV(string noPolisi, int tahun, decimal sewa, decimal supir) : base(noPolisi, tahun)
         {
             this.sewa = sewa;
             this.supir = supir;
-            type = "Suv";
-            TotalRevenue =  sewa + supir ;
-
+            this.Type = "SUV";
+            TotalRevenue = sewa + supir;
         }
 
-        public Suv(string noPolisi, int tahun, string type, decimal totalRevenue, int v1, int v2) : this(noPolisi, tahun, type, totalRevenue)
-        {
-        }
-
-        //Encapsulasi
-
-
-        //Ovveride
-        public override string? ToString()
-        {
-            return $"{base.ToString()}| T.Transportasi = {this.sewa.ToString("C", new CultureInfo("Id-ID"))}| Total Revenue : {TotalRevenue.ToString("C", new CultureInfo("Id-ID"))}\n";
-
-        }
         public decimal Sewa { get => sewa; set => sewa = value; }
         public decimal Supir { get => supir; set => supir = value; }
+
+        public override string ToString()
+        {
+            return $"{base.ToString()} | Sewa = {this.sewa.ToString("C", new CultureInfo("id-ID"))}  | supir = {this.supir.ToString("C", new CultureInfo("id-ID"))}";
+        }
 
     }
 }

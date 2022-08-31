@@ -1,35 +1,36 @@
-﻿// call class empolyee
-using static System.Console;
-using QuizOOP;
+﻿using static System.Console;
 using System.Globalization;
-bool testing = false;
+//call class CAR
+using QuizOOP;
 
-//create object instant , gunakan operator new
-Transportation trans1 = new Transportation("D 1001 UM", 2015,"SUV",600_0000 );
-Transportation trans2 = new Transportation("D 1002 UM", 2019, "SUV", 600_0000);
-Transportation trans3 = new Transportation("D 1002 UM", 2018, "TAXI", 230_000);
-Transportation trans4 = new Transportation("D 87 UK", 2018, "TAXI", 550_000);
-Transportation trans5 = new Transportation("D 55 UJ", 2016, "ANGKOT", 157_0000);
-Transportation trans6 = new Transportation("D 55 UJ", 2016, "ANGKOT", 180_0000);
+//CAR cr = new CAR("D 1001 UM", new DateTime(2015), "SUV", 0M);
 
+//WriteLine(cr.ToString());
+//CAR cr1 = new CAR("D 1001 UK",new DateTime(2016),300_000;
 
-Suv prog1 = new Suv ("D 55 UJ", 2016, "ANGKOT", 180_0000,10_000,10_0000);
+Console.WriteLine("=============================================List Kendaraan==================================================================================");
+ICar carInterface = new CARlmpl();
+var ListOfKendaraan = carInterface.InitDataCAR();
+carInterface.showList(ref ListOfKendaraan);
 
-//create oject Transportation with parameter constructor
-//store to list (mempermudah menampilkan menggunakan list)
-List<Transportation> listEmps = new List<Transportation> { trans1,trans2,trans3,trans4,trans5,trans6};
+Console.WriteLine("=========================================FIND CAR BY NOPOLISI================================================================================");
+var carr = carInterface.findCarByID(ListOfKendaraan, "D 1001 UM");
+WriteLine($" KENDARAAN {carr}");
 
-foreach (var item in listEmps)
-{
-    WriteLine(item.ToString());
-}
+var carr2 = carInterface.findCarByID(ListOfKendaraan, "D 55 UJ");
+WriteLine($" KENDARAAN {carr2}");
 
-WriteLine($"Total employee : {Transportation.t}");
+var carr3 = carInterface.findCarByID(ListOfKendaraan, "D 87 UK");
+WriteLine($" KENDARAAN {carr3}");
 
+Console.WriteLine("==========================================Get Total Revenue==================================================================================");
+var Total = carInterface.GetTotalRevenue(ListOfKendaraan);
+carInterface.ShowTotalRevnue(Total);
 
-Console.ReadLine();
-
-
+Console.WriteLine("=======================================Total Kendaraan By type===============================================================================");
+var ByType = carInterface.TotalcarByType(ListOfKendaraan);
+carInterface.ShowTotalRevnueTy(ByType);
+Console.WriteLine("=============================================================================================================================================");
 
 
 
