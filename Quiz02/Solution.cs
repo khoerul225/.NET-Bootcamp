@@ -15,25 +15,9 @@ namespace quiz04_dotnet
         }
         ///Perbaikan
         ///
-        public static void a()
-        {
-            int[] arr = new int[10];
 
-        }
         public static void Soal1p()
-        {
-            Console.Write("Masukan :");
-            int n = Convert.ToInt32(Console.ReadLine());
-            int [] mat = new int[n];
-            int [] s = mat.Distinct().ToArray();            
-            for (int i = 0; i < s.Length; i++)
-            {
-                Console.Write($"{s} ");
-            }
-            Console.WriteLine("-----------------------");
-            Console.WriteLine("Output");      
-            Console.WriteLine(n);
-        }
+
 
 
 
