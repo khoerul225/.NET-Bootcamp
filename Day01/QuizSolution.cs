@@ -10,6 +10,7 @@ namespace Day01
 {
     internal class QuizSolution
     {
+        \\2
         public static void SumDigit()
         {
             Console.Write("Enter number integer : ");
@@ -24,7 +25,7 @@ namespace Day01
             }
             Console.WriteLine("Total Sum : " + sum);
         }
-
+        \\3
         public static void ReverseNumber()
         {
             Console.Write("Enter number integer : ");
@@ -40,7 +41,7 @@ namespace Day01
             }
             Console.WriteLine(ret);
         }
-
+        \\1
         public static void CountDigit()
         {
             Console.Write("Enter number integer : ");
@@ -61,7 +62,7 @@ namespace Day01
         {
 
         }
-
+        \\4
         public static void SecondGreatest()
         {
             int greatest = int.MinValue;
@@ -125,7 +126,7 @@ namespace Day01
         }
 
 
-        //2
+        //6
         public static void MaxNumber()
         {
             int max = int.MinValue;
@@ -143,7 +144,7 @@ namespace Day01
 
             Console.WriteLine($"angka terbesar : {max}");
         }
-
+        \\7
         public static void FindDivisor()
         {
             Console.Write("Enter numbers : ");
@@ -175,7 +176,7 @@ namespace Day01
             }
         }
 
-        //6 prime
+        //8 prime
         static Boolean isPrime(int number)
         {
             for (int i = 2; i <= number / 2; i++)
@@ -188,7 +189,8 @@ namespace Day01
             return true;
         }
 
-        //7 
+        //9 palindrone h
+        
         public static void ShowPalindrome()
         {
             Console.Write("Enter strings : ");
@@ -216,7 +218,7 @@ namespace Day01
 
         }
 
-        //8 
+        //10 Vocal consonan
         public static void CountVowel()
         {
             Console.Write("Enter strings : ");
@@ -242,7 +244,8 @@ namespace Day01
 
         }
 
-        //9 
+        // 11 Sum word at Paragraf
+     
         public static void CountWord()
         {
             Console.Write("Enter strings : ");
@@ -260,7 +263,7 @@ namespace Day01
             Console.WriteLine($"Total Words : {word}");
         }
 
-        //10
+        //12 convert to star
         public static void ConvertMiddleToStar()
         {
             Console.Write("Enter strings : ");
@@ -308,7 +311,7 @@ namespace Day01
             Console.WriteLine(joinCutWord);
         }
 
-        //11. I Hate Monday
+        //11. Next Day
         public static void ILoveWeekend()
         {
             // Today's date
@@ -331,7 +334,7 @@ namespace Day01
             }
         }
 
-        //12
+        //14 Total speech at word
         public static void CountStringInString()
         {
             Console.Write("Enter strings : ");
@@ -353,7 +356,7 @@ namespace Day01
             Console.WriteLine($"Total kata yang muncul : {count.ToString()} dari text : {input}");
         }
 
-        //1
+        //5 Guess Number
         public static void GuessNumber()
         {
             Console.WriteLine("Guess magic number between 0-20");

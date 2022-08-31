@@ -34,7 +34,12 @@ WriteLine();
 WriteLine("After Shift Array");
 Arrays.DisplayArrayInt(shiftArray);
 
+<<<<<<< HEAD
 /***//* Matrix *//*
+=======
+/** Matrix */
+/*
+>>>>>>> 4406072c94d5879462a948352b673c4de9662b95
 Matrix.InitMatrix();
 var myMatrix = Matrix.FillRandomMatrix(5, 5);
 Matrix.DisplayMatrix(myMatrix);
@@ -44,4 +49,8 @@ var matrixDiagonal = Matrix.MatrixDiagonal(5, 5);
 Matrix.DisplayMatrix(matrixDiagonal);
 
 ReadLine();
+<<<<<<< HEAD
 */
+=======
+*/
+>>>>>>> 4406072c94d5879462a948352b673c4de9662b95

@@ -1,5 +1,8 @@
+<<<<<<< HEAD
 ﻿/*using static System.Console;
 using Day02;*/
+=======
+>>>>>>> 4406072c94d5879462a948352b673c4de9662b95
 bool testing = false;
 
 
@@ -102,6 +105,11 @@ Console.ReadLine();
 
 
 /*
+
+﻿using static System.Console;
+using Day02;
+
+
 Console.WriteLine("-----------NO1---------");
 Console.WriteLine("-----------------------");
 Quiz02.Solution.Soal1(arr1);
