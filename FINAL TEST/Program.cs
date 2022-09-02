@@ -1,10 +1,7 @@
 ﻿using static System.Console;
-using FinalTestKhoerul;
+using DAY05;
 
-
-
-
-var tampilkan = Solution.NumberSatu(70);
+var tampilkan = MyCollections.NumberSatu(70);
 WriteLine(tampilkan);
 
 /*var tampilkan = Solution.NumberDua(7);
@@ -24,44 +21,6 @@ Console.WriteLine(tampilkan);
 
 var tampilkan = Solution.NumberDelapan(5, 5);
 Solution.DisplayMatrix(tampilkan);*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /*Console.WriteLine();
 Quiz02.Solution.NumberDua(5);
