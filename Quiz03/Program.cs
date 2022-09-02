@@ -17,13 +17,12 @@ using Day03;
 //    Console.WriteLine($"{item}");
 //}
 
-//var numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
-//var myNumber = MyCollections.GetStudent(ref numbers);
-
-//foreach (var item in numbers)
-//{
-//    Console.WriteLine($"{item}");
-//}
+var numbers = new List<int> { 1, 2, 3, 4, 5, 6 };
+var myNumber = MyCollections.GetStudent(ref numbers);
+foreach (var item in numbers)
+{
+    Console.WriteLine($"{item}");
+}
 
 /*____QUIZ DAY 03____*/
 //QuizDay03.No1();

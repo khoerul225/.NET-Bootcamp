@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Day03
 {
-    internal class QuizDay03
+    public class m
     {
         //No 1
         public static void displayHashset(HashSet<int> number1)
