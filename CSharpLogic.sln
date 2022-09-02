@@ -21,6 +21,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QUIZ 5 CSharp OOP", "QuizOO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OOP PART3 (310822)", "OOP PART3\OOP PART3 (310822).csproj", "{2BE177B9-E4E6-45B1-83E3-24E0B2899417}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FINAL TEST", "FINAL TEST\FINAL TEST.csproj", "{DC9CC572-D219-40D5-9401-D9C7C6D8D015}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +65,10 @@ Global
 		{2BE177B9-E4E6-45B1-83E3-24E0B2899417}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2BE177B9-E4E6-45B1-83E3-24E0B2899417}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2BE177B9-E4E6-45B1-83E3-24E0B2899417}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC9CC572-D219-40D5-9401-D9C7C6D8D015}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC9CC572-D219-40D5-9401-D9C7C6D8D015}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC9CC572-D219-40D5-9401-D9C7C6D8D015}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC9CC572-D219-40D5-9401-D9C7C6D8D015}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

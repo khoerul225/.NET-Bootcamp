@@ -1,7 +1,7 @@
 ﻿//// See https://aka.ms/new-console-template for more information
 ////Console.WriteLine("Hello, World!");
 
-using Day03;
+using FINAL_TEST;
 //MyCollections.InitList();
 //MyCollections.InitStack();
 //MyCollections.InitDictionary();
