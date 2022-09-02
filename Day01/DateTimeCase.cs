@@ -19,24 +19,28 @@ namespace Day01
             int minute = now.Minute;
             int second = now.Second;
 
+
+
+            
+
             // only date
             DateTime onlyDate = now.Date;
-            Console.WriteLine($"Only Date : {onlyDate}");
+                Console.WriteLine($"Only Date : {onlyDate}");
 
-            //dayOfWeek
-            DayOfWeek dayOfWeek = now.DayOfWeek;
+                //dayOfWeek
+                DayOfWeek dayOfWeek = now.DayOfWeek;
             DayOfWeek kamis = DayOfWeek.Thursday;
 
-            //addDays
+                //addDays
             DateTime tomorrow = now.AddDays(2);
 
-            //selisih hari
-            TimeSpan dateDifference = tomorrow - now;
-            int daysRemaining = dateDifference.Days;
-            Console.WriteLine($"{now} - {tomorrow},selisih : {daysRemaining}");
+                //selisih hari
+                             TimeSpan dateDifference = tomorrow - now;
+                int daysRemaining = dateDifference.Days;
+                             Console.WriteLine($"{now} - {tomorrow},selisih : {daysRemaining}");
 
-            // store spesific date
+            // store     spesific date
             DateTime birthDay = new DateTime(1998, 10, 21);
-        }
-    }
+        }   
+    }   
 }
