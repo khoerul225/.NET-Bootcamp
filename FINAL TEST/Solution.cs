@@ -1,235 +1,148 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Metrics;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DAY05
+namespace FinalTestKm
 {
-    internal class MyCollections
+    internal class Jawaban
     {
-        public static void InitList()
+        public static int NumberSatu(int nilai)
         {
-            var alfabet = new List<string> { "A", "B", "C", "D", "E" };
-            alfabet.Add("F");
-            alfabet.AddRange(new[] { "G", "H", "I" });
-            alfabet.Insert(0, "J");
-            alfabet.InsertRange(3, new[] { "X", "Y" });
-
-            foreach (var item in alfabet)
+            int jarakTempuh = 10;
+            int count = 0;
+            for (int i = 30; i < nilai; i++)
             {
-                Console.Write($"{item} ");
+                jarakTempuh = jarakTempuh + i;
+                count++;
+                if (jarakTempuh >= nilai)
+                {
+                    break;
+                }
             }
-            Console.WriteLine();
-
-            //remove element  for list
-            alfabet.Remove("Y");
-            alfabet.RemoveRange(4, 6);
-            alfabet.RemoveAll(v => v == "X");
-
-            //declare list int
-            var number = new List<int> { 2, 5, 7, 11, 13, 17, 19 };
-            number.Add(23);
-            /*number.Remove(13);
-            number.RemoveAll(v => v == 7);*/
-
-            //find element
-            var a = number.Find(e => e < 10);
-            var b = number.FindLast(e => e < 11);
-            var c = number.FindAll(e => e <= 10);
-            Console.WriteLine();
-
-            //find element
-            var d = number.FindIndex(e => e <= 11);
-            var e = number.FindLastIndex(e => e <= 11);
-            var f = number.IndexOf(13);
-            var g = number.BinarySearch(11);
-            Console.WriteLine();
+            return count;
         }
 
-        public static void InitStack()
+        public static int NumberDua(int nilai)
         {
-            var numbers = new Stack<int>(new int[] { 1, 2, 3 });
-            numbers.Push(5);
-            numbers.Push(7);
-
-            //remove pop
-            numbers.Pop();
-            var n = numbers.Peek();
-            numbers.Clear();
-
-        }
-
-        public static void InitDictionary()
-        {
-            var pl = new Dictionary<int, string>();
-            pl.Add(1, "C#");
-            pl.Add(2, "Java");
-
-            var pl2 = new Dictionary<int, string>()
+            int result = 1;
+            for (int i = 1; i <= nilai; i++)
             {
-                {1, "C#" },
-                {2, "Java" },
-                {3, "Python" }
-            };
-
-            //add element
-            pl2.Add(4, "Golang");
-            pl2.TryAdd(4, "SQl");
-
-            //update element value
-            pl2[4] = "SQL";
-
-            foreach (var item in pl2)
-            {
-                Console.WriteLine($"{item.Key} - {item.Value}");
+                result *= i;
             }
-
-            Console.WriteLine();
+            return result;
         }
-
-        //store Uniqe Element
-        public static void InitHastSet()
+        public static int NumberTiga(int nilai)
         {
-            var numbers = new HashSet<int>() { 1, 2, 3, 5, 8 };
-            numbers.Add(5);
-            numbers.Add(10);
-            numbers.Add(8);
-
-            var hs1 = new HashSet<int>() { 1, 2, 5, 6, 9 };
-            var hs2 = new HashSet<int>() { 1, 2, 3, 4 };
-
-            /*var r1 = new HashSet<int>(hs1);
-            IEnumerable<int> hs2 = new HashSet<int>(hs2);
-            r1.IntersectWith(hs2); //inner join,  result = 1, 2
-*/
-            var r1 = new HashSet<int>(hs1);
-            IEnumerable<int> both1 = r1.Intersect(hs2);
-            Console.WriteLine("-----r1---");
-            foreach (var item in both1)
-                Console.WriteLine(item);
-
-
-            var r2 = new HashSet<int>(hs1);
-            IEnumerable<int> both2 = r2.Union(hs2);
-            Console.WriteLine("-----r2---");
-            foreach (var item in both2)
-                Console.WriteLine(item);
-            // union => 1,2,3,4,5,6,9
-
-            var r3 = new HashSet<int>(hs1);
-            IEnumerable<int> both3 = r3.Except(hs2);
-            Console.WriteLine("-----r3---");
-            var both4 = r3.Except(hs1);
-            foreach (var item in both3)
-                Console.WriteLine(item);
-
-
-            Console.WriteLine("---------");
-            var r4 = new HashSet<int>(hs1);
-            r4.SymmetricExceptWith(hs2); //output 3,4,5,6,9
-            //Convert hashset to list
-            Console.WriteLine("-----r4---");
-            var myNumber = r4.ToList();
-            foreach (var item in myNumber)
-                Console.WriteLine(item);
-        }
-
-        //Jawaban N01
-
-
-        public static void InitQueue()
-        {
-            var queue = new Queue<string>();
-            queue.Enqueue("Asep");
-            queue.Enqueue("Budi");
-            queue.Enqueue("Charlie");
-
-            Console.WriteLine($" Queue from front to back");
-            foreach (var item in queue)
+            int result = 0;
+            for (int i = 0; i <= nilai; i++)
             {
-                Console.Write($"{item} ");
+                result += i;
             }
-
-            string served = queue.Dequeue();
-            Console.WriteLine($"Served : {served}");
+            return result;
         }
-
-        //return List<T>
-        public static List<T> GetStudent<T>(ref List<T> list)
+        public static int NumberEmpat(int nilai)
         {
-            var myList = new List<T>();
-            foreach (var item in list)
+            int result = 0;
+            int simpan = 0;
+            int hasil = 1;
+            int a = 0;
+            for (int i = 1; i < nilai; i++)
             {
-                myList.Add(item);
+                a += i;
+                result = simpan + hasil;     //0 = 0 + 1  // 1 = 1 + 2
+                simpan = result;     // 1 = 0       // 3 = 2
+                Console.WriteLine(simpan);
             }
-            return myList;
+            return result;
+        }
+        public static int NumberLima()
+        {
+            int result = 0;
+
+            return result;
         }
 
-        public static void No1()
+        public static string NumberEnam(string nilai)
         {
-            var numbers = new List<int>() { 1, 2, 3, 4, 5, 6 };
-            ////Dibaca
-            var myNumbers = MyCollections.GetStudent(ref numbers);
-            ///ditampilkan
-            foreach (var item in myNumbers)
+            string result = "FALSE";
+            for (int i = 1; i <= nilai.Length; i++)
             {
-                Console.Write($"{item} ");
+                if (i % 2 == 0)
+                {
+                    result = "TRUE";
+                }
+                else
+                {
+                    result = "FALSE";
+                }
             }
-            //Setelah ini kembali ke Program
-
-            Console.WriteLine();
+            return result;
         }
-
-
-
-        public static void no2()
+        public static string NumberTujuh(string nilai1, string nilai2)
         {
-            Console.WriteLine("---------------------------");
-            Console.WriteLine("--------------N01----------");
-            Console.WriteLine("---------------------------");
-
-            var hs1 = new HashSet<int>() { 1, 2, 5, 6, 9 };
-            var hs2 = new HashSet<int>() { 1, 2, 3, 4 };
-
-            var r1 = new HashSet<int>(hs1);
-            IEnumerable<int> both1 = r1.Intersect(hs2);
-            Console.WriteLine("A irisan B)");
-            foreach (var item in both1)
-                Console.Write($"{item} ");
-            Console.WriteLine();
-            Console.WriteLine("---------------------------");
-
-            var r2 = new HashSet<int>(hs1);
-            IEnumerable<int> both2 = r2.Union(hs2);
-            Console.WriteLine("A union B");
-            foreach (var item in both2)
-                Console.Write($"{((short)item)}");
-
-
-            Console.WriteLine();
-            Console.WriteLine("---------------------------");
-            // union => 1,2,3,4,5,6,9
-            var r3 = new HashSet<int>(hs1);
-            IEnumerable<int> both3 = r3.Except(hs2);
-            Console.WriteLine("A yang tidak sama dengan B");
-            var both4 = r3.Except(hs1);
-            foreach (var item in both3)
-                Console.Write($"{item} ");
-            Console.WriteLine();
-            Console.WriteLine("---------------------------");
-            var r4 = new HashSet<int>(hs1);
-            r4.SymmetricExceptWith(hs2); //output 3,4,5,6,9
-            //Convert hashset to list
-            Console.WriteLine("Yang tidak sama di A & B");
-            var myNumber = r4.ToList();
-            foreach (var item in myNumber)
-                Console.Write($"{item} ");
-            Console.WriteLine();
-            Console.WriteLine("---------------------------");
+            string result = "FALSE";
+            string simpanNilai1 = nilai1.ToLower();
+            string simpanNilai2 = nilai2.ToLower();
+            string a = "";
+            if (nilai1.Length != nilai2.Length)
+            {
+                result = "FALSE";
+            }
+            else
+            {
+                for (int i = 0; i < simpanNilai1.Length; i++)
+                {
+                    for (int j = 0; j < simpanNilai2.Length; j++)
+                    {
+                        if (simpanNilai1[i] == simpanNilai2[j])
+                        {
+                            a += simpanNilai1[i];
+                            break;
+                        }
+                    }
+                }
+            }
+            if (a == simpanNilai1)
+            {
+                result = "True";
+            }
+            else
+            {
+                result = "False";
+            }
+            return result;
         }
-
-
-
+        public static int[,] NumberDelapan(int b, int k)
+        {
+            int[,] matrix = new int[b, k];
+            int counter = b;
+            int count = 10;
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    if (i >= j)
+                    {
+                        matrix[i, 0] = count;
+                    }
+                }
+            }
+            return matrix;
+        }
+        public static void DisplayMatrix(int[,] matrix)
+        {
+            for (int i = 0; i < matrix.GetLength(0); i++) // looping baris
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)//loop kolom
+                {
+                    Console.Write(matrix[i, j] + "\t");
+                }
+                Console.WriteLine();
+            }
+        }
     }
 }
