@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace FinalTestKm
 {
-    internal class Jawaban
+    internal class Solution
     {
-        public static int NumberSatu(int nilai)
+        public static int NumberOne(int nilai)
         {
             int jarakTempuh = 10;
             int count = 0;
@@ -26,7 +26,7 @@ namespace FinalTestKm
             return count;
         }
 
-        public static int NumberDua(int nilai)
+        public static int NumberTwo(int nilai)
         {
             int result = 1;
             for (int i = 1; i <= nilai; i++)
@@ -35,7 +35,7 @@ namespace FinalTestKm
             }
             return result;
         }
-        public static int NumberTiga(int nilai)
+        public static int NumberThree(int nilai)
         {
             int result = 0;
             for (int i = 0; i <= nilai; i++)
@@ -44,7 +44,7 @@ namespace FinalTestKm
             }
             return result;
         }
-        public static int NumberEmpat(int nilai)
+        public static int NumberFour(int nilai)
         {
             int result = 0;
             int simpan = 0;
@@ -59,14 +59,14 @@ namespace FinalTestKm
             }
             return result;
         }
-        public static int NumberLima()
+        public static int NumberFive()
         {
             int result = 0;
 
             return result;
         }
 
-        public static string NumberEnam(string nilai)
+        public static string NumberSix(string nilai)
         {
             string result = "FALSE";
             for (int i = 1; i <= nilai.Length; i++)
@@ -82,7 +82,7 @@ namespace FinalTestKm
             }
             return result;
         }
-        public static string NumberTujuh(string nilai1, string nilai2)
+        public static string NumberSeven(string nilai1, string nilai2)
         {
             string result = "FALSE";
             string simpanNilai1 = nilai1.ToLower();
@@ -116,7 +116,7 @@ namespace FinalTestKm
             }
             return result;
         }
-        public static int[,] NumberDelapan(int b, int k)
+        public static int[,] NumberEight(int b, int k)
         {
             int[,] matrix = new int[b, k];
             int counter = b;
